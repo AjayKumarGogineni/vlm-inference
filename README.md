@@ -95,6 +95,7 @@ After applying optimizations, re-run timing tests and report improvements compar
 
 **Deliverables**
 
+- Main Project presentation
 - Code (.ipynb or .py)
 - Timing report - CSV file recording inference times before and after optimization
 - Short report (2–3 pages) covering:
