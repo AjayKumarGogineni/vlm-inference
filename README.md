@@ -18,7 +18,9 @@ You will be provided with 270 TikTok videos in .mp4 format ([Google Drive](https
 
 **Validation**
 
-The generated responses should be compared against the ground truth responses to evaluate performance of summary and accuracy of category selection. The following metrics will be used for evaluating summary: BLEU, ROUGE and BERT score
+The generated responses should be compared against the ground truth responses to evaluate performance of summary and accuracy of category selection. We will be using BERTScore for evaluating summary.
+
+
 
 **Baseline Model**
 
@@ -72,6 +74,11 @@ Record execution time for:
 
 Save these measurements in a CSV file for analysis.
 
+Record performance metric for:
+
+- Summary quality : BERTScore
+- Category prediction : Accuracy
+
 **Part B — Optimization**
 
 Apply at least two different optimization strategies to the baseline model to improve inference time and evaluation metrics.
@@ -97,6 +104,8 @@ After applying optimizations, re-run timing tests and report improvements compar
   - Trade-offs between speed and summary quality
   - Future improvements
 
+You have been provided with a basic template to begin with. You are welcome to make changes as needed to improve upon it.
+
 **Steps to run the code**
 
 1. Clone the repository to your local machine.
@@ -115,7 +124,7 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-7. Sample output files can be found in the `data/outputs/` directory.
+7. Sample output files with baseline performance can be found in the `data/outputs/` directory.
 
 **Possible issues**
 
