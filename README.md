@@ -14,7 +14,7 @@ You will:
 You will be provided with 270 TikTok videos in .mp4 format and their corresponding transcripts in .txt files (available on [Google Drive](https://drive.google.com/drive/folders/1ZexqdCYpCQPpSjxL38Y8NpvPNCz_lJwH?usp=drive_link)). Each video has a unique file name, and the video durations range from approximately 5 seconds to 5 minutes. Your goal is to generate this information for each video using a Vision Language Model (VLM):
 
 * Summary: A detailed and factual summary of the video content (no hallucinations).
-* Category: One label selected from a predefined set of categories.
+* Category: One label selected from a predefined set of categories (see [here](https://github.com/AjayKumarGogineni/vlm-inference/blob/899de3b908cb64b8b5ee08cabe29e1d5b3855ee2/inference_utils.py#L11)).
 
 **Validation**
 
@@ -42,24 +42,30 @@ Steps with Description
 
 <img src="images/Pipeline_workflow.png" alt="Pipeline Workflow" width="600">
 
-TikTok video frame example:
+***Input Examples***
+
+TikTok video frame:
 
 <img src="images/Video_frame.png" alt="Video Frame" width="200">
 
-Audio Transcript example:
+Audio Transcript:
 
 <img src="images/Audio_transcript.png" alt="Audio Transcript" width="600">
 
-Ground Truth summary:
+***Ground Truth***
+
+Ground Truth Summary:
 `The video is a travel vlog highlighting five unique activities to do on the Greek island of Paros. The presenter, speaking in a casual and enthusiastic tone, suggests: 1. Having a meal in Lefkes and hiking the Byzantine road to Prodromos, which takes about 45 minutes. 2. Visiting Kalogero beach for a natural mud mask, where one can use clay from the rocks. 3. Exploring Laggeri beach, described as secluded and a nudist beach, noting that there's enough space for everyone. 4. Visiting the Butterfly nature reserve, located 5 kilometers from Paros town, which can be reached via an organized excursion. 5. Driving by Agios Fokas, a place located 6 kilometers from the capital of Paros, featuring an unorganized yet picturesque church. The video concludes by asking viewers if they would like a part two and encouraging them to follow for daily Greece travel tips.`
 
 Ground Truth Category:
 `Travel & Events`
 
-Generated Summary:
+***Predictions***
+
+Predicted Summary:
 `The video showcases various activities and locations in the Greek island of Paros. It begins with a person standing in front of a scenic view of the sea and white buildings, with the text Paros 5 out of the box activities! displayed at the top. The person gestures and points towards the camera, indicating the start of the video. The scene transitions to a person in a red and white striped shirt standing in front of a picturesque white building with blue accents, with the text Could you do a vid on Paros please? 🙏 at the top.`
 
-Generated Category:
+Predicted Category:
 `Travel & Events`
 
 **Part A — Baseline Measurement**
