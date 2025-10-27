@@ -11,7 +11,7 @@ You will:
 
 **Dataset**
 
-You will be provided with 270 TikTok videos in .mp4 format ([Google Drive](https://drive.google.com/drive/folders/1ZexqdCYpCQPpSjxL38Y8NpvPNCz_lJwH?usp=drive_link)) where the length varies from 5 seconds to 5 minutes. Your goal is to generate this information for each video using a Vision Language Model (VLM):
+You will be provided with 270 TikTok videos in .mp4 format and their corresponding transcripts in .txt files (available on [Google Drive](https://drive.google.com/drive/folders/1ZexqdCYpCQPpSjxL38Y8NpvPNCz_lJwH?usp=drive_link)). Each video has a unique file name, and the video durations range from approximately 5 seconds to 5 minutes. Your goal is to generate this information for each video using a Vision Language Model (VLM):
 
 * Summary: A detailed and factual summary of the video content (no hallucinations).
 * Category: One label selected from a predefined set of categories.
@@ -110,7 +110,7 @@ You have been provided with a basic template to begin with. You are welcome to m
 **Steps to run the code**
 
 1. Clone the repository to your local machine.
-2. Create a virtual environment using Python 3.11.2 and activate it:
+2. Create a virtual environment using Python 3.11 and activate it:
 ```bash
 python3.11 -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
@@ -119,8 +119,8 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```bash
 pip install -r requirements.txt
 ```
-4. Download the dataset of TikTok videos and audio transcripts from the Google drive link ([Google Drive](https://drive.google.com/drive/folders/1ZexqdCYpCQPpSjxL38Y8NpvPNCz_lJwH?usp=drive_link))and place them in the `data/inputs/videos/` and `data/inputs/audio_transcripts/` directory respectively.
-5. Update the paths in config.py to point to the correct input and output directories.
+4. Download the dataset of TikTok videos and audio transcripts from the Google drive link ([Google Drive](https://drive.google.com/drive/folders/1ZexqdCYpCQPpSjxL38Y8NpvPNCz_lJwH?usp=drive_link))and place them in the `data/inputs/videos/` and `data/inputs/audio_transcripts/` directories respectively.
+5. Update the paths in config.py to point to the correct input and output directories if required. The current pipeline will save the outputs in `data/outputs/` directory by default
 6. Run main.py to execute the video summarization pipeline. The pipeline processes each video sequentially, generates a summary and category for each video, and saves the results to a CSV file. It also records inference times and evaluation metrics.
 ```bash
 python main.py
@@ -130,4 +130,4 @@ python main.py
 **Possible issues**
 
 1. Ensure the paths in config.py are correctly set to your local directories.
-2. Ensure to use Python 3.11.2 as some dependencies may not be compatible with other versions.
+2. Ensure to use Python 3.11 as some dependencies may not be compatible with other versions.
